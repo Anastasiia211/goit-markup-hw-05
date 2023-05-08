@@ -169,7 +169,11 @@ section {
 .menu-list:focus {
   color: #404bbf;
 }
-.menu-item ::after {
+.menu-list::after {
+  position: absolute;
+}
+
+.menu-list::after {
   content: "";
   position: relative;
   display: block;
