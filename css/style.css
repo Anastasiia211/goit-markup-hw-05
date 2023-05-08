@@ -183,12 +183,12 @@ section {
   display: block;
   width: 100%;
   height: 4px;
-  color: #404bbf;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-list.active::after {
   background: #404bbf;
+  color: #404bbf;
 }
 /* Адреса */
 .address {
@@ -518,6 +518,13 @@ section {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+.button-list {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* Portfolio animation */
 
 .portfolio-link-wrapper {
@@ -529,6 +536,7 @@ section {
   position: absolute;
   left: 0;
   top: 0;
+  padding: 40px 32px;
   transform: translate(0, 100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   font-size: 16px;
@@ -544,6 +552,10 @@ section {
 .portfolio-link:hover .overlay,
 .portfolio-link:focus .overlay {
   transform: translate(0, 0);
+}
+
+.portfolio-link {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Customers */
@@ -664,6 +676,8 @@ web-logo-footer {
   width: 100%;
   height: 100%;
   background: rgba(46, 47, 66, 0.4);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 100;
 }
 .modal {
@@ -674,10 +688,9 @@ web-logo-footer {
   width: 408px;
   min-height: 576px;
   background-color: var(--color-dairy);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 4px;
 }
 .modal-close {
